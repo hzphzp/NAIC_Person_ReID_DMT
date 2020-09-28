@@ -1,6 +1,6 @@
 MODEL:
   PRETRAIN_CHOICE: 'imagenet'
-  PRETRAIN_PATH: '/root/.cache/torch/checkpoints/resnet101_ibn_a.pth.tar'
+  PRETRAIN_PATH: '/gdata/huangzp/tmphome/.cache/torch/checkpoints/resnet101_ibn_a.pth.tar'
   METRIC_LOSS_TYPE: 'triplet_center'
   IF_LABELSMOOTH: 'on'
   IF_WITH_CENTER: 'yes'
