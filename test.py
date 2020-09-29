@@ -37,7 +37,6 @@ if __name__ == "__main__":
             logger.info(config_str)
     logger.info("Running with config:\n{}".format(cfg))
 
-    os.environ['CUDA_VISIBLE_DEVICES'] = cfg.MODEL.DEVICE_ID
 
     train_loader, val_loader_green, val_loader_normal, num_query_green,num_query_normal, num_classes = make_dataloader(cfg)
     model = make_model(cfg, num_class=num_classes)

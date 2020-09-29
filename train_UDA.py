@@ -62,7 +62,6 @@ if __name__ == '__main__':
         with open(args.config_file_test, 'r') as cf:
             config_str = "\n" + cf.read()
             print(config_str)
-    os.environ['CUDA_VISIBLE_DEVICES'] = cfg_test.MODEL.DEVICE_ID
     print(cfg_test, 'cfg_test')
 
     train_loader, val_loader_green, val_loader_normal, num_query_green, num_query_normal, num_classes = make_dataloader(cfg_test)
@@ -101,7 +100,6 @@ if __name__ == '__main__':
             logger.info(config_str)
     logger.info("Running with config:\n{}".format(cfg))
 
-    os.environ['CUDA_VISIBLE_DEVICES'] = cfg.MODEL.DEVICE_ID
 
     indexes = np.argwhere(distmat < cfg.MODEL.THRESH)
     logger.info('Model thresh: {}'.format(cfg.MODEL.THRESH))
